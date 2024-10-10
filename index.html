@@ -1,0 +1,107 @@
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <link rel="icon" href="/static/favicon.ico">
+    <title>Albumy | Julia & Maciej</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100vh;
+            width: 100vw;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+        }
+
+        #buttons {
+            z-index: 1;
+            display: flex;
+            flex-direction: row;
+        }
+
+        @media (max-width: 800px) {
+            #buttons {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        .btn {
+            display: block;
+            margin-right: 1em;
+            margin-left: 1em;
+            margin-top: 1em;
+            border-radius: 0.3em;
+            background-color: white !important;
+            color: black;
+        }
+
+        .primary-btn {
+            color: white !important;
+            background-color: #ff8989 !important;
+        }
+
+        .btn:hover {
+            background-color: #ff8989 !important;
+            color: black;
+        }
+
+        .background {
+            background-image: url('/static/background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            width: 100%;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+<div class="background"></div>
+<div class="container">
+    <div id="buttons">
+        <button id="photographer" onclick="location.href='https://photos.app.goo.gl/ceTmCDq6zKQNqS178'" class="btn primary-btn waves-effect waves-light" type="submit">
+            Zdjęcia od Fotografa
+            <i class="material-icons right">camera</i>
+        </button>
+        <button id="booth" onclick="location.href='https://photos.app.goo.gl/qLaWEEP4jrtEy2Nk9'" class="btn primary-btn waves-effect waves-light" type="submit">
+            Zdjęcia z Fotobudki
+            <i class="material-icons right">photo_camera</i>
+        </button>
+        <button id="private" onclick="location.href='https://photos.app.goo.gl/6owQ8NkKoX1Z9B3A6'" class="btn primary-btn waves-effect waves-light" type="submit">
+            Prywatne Zdjęcia
+            <i class="material-icons right">photo_library</i>
+        </button>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+    (function () {
+        M.AutoInit();
+    })();
+</script>
+
+</body>
+</html>
